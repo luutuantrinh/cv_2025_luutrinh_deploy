@@ -1010,7 +1010,7 @@ body.loaded {
 }
 
 .hero-image-box img {
-	border-radius: 38px;
+	/* border-radius: 38px;
 	-webkit-transform: rotate(4.29deg);
 	-ms-transform: rotate(4.29deg);
 	transform: rotate(4.29deg);
@@ -1018,7 +1018,10 @@ body.loaded {
 	border: 2px solid var(--tj-theme-secondary);
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
-	transition: 0.3s;
+	transition: 0.3s; */
+	border: 2px solid var(--tj-theme-secondary);
+    transition: 0.3s;
+    transform: rotate(0); /* Giữ hình ảnh thẳng */
 }
 
 .hero-image-box img:hover {
@@ -1026,10 +1029,12 @@ body.loaded {
 	-webkit-transform: rotate(0);
 	-ms-transform: rotate(0);
 	transform: rotate(0);
+	border-radius: 21px;
 }
 
 .hero-image-box {
 	position: relative;
+	transform: none; /* Loại bỏ hiệu ứng lắc */
 }
 
 .hero-image-box:before {
@@ -3479,3 +3484,11 @@ body.absolute_header .breadcrumb_area {
 }
 
 /* END: Modal CSS */
+
+/* Custom for download button Skill Section */
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Điều chỉnh khoảng cách trên nếu cần */
+    margin-bottom: 30px; /* Thêm khoảng cách phía dưới */
+}

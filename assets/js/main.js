@@ -454,3 +454,13 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		});
 	});
 })(jQuery);
+
+// Smooth scroll for footer menu links
+
+document.querySelectorAll('.footer-menu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    });
+});
