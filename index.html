@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.0.1">
     <link rel="stylesheet" href="assets/css/light-mode.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -2005,7 +2005,17 @@
     <script src="assets/js/magnific-popup.js"></script>
     <script src="assets/js/validate.min.js"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.jsv=1.0.1"></script>
+    <script>
+        const version = new Date().getTime();
+        document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        link.href += `?v=${version}`;
+        });
+        document.querySelectorAll('script[src]').forEach(script => {
+        script.src += `?v=${version}`;
+        });
+    </script>
+	
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
