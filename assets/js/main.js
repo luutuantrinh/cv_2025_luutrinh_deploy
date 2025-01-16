@@ -464,9 +464,3 @@ document.querySelectorAll('.footer-menu a').forEach(anchor => {
         document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
     });
 });
-
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('mouseover', function (event) {
-        event.preventDefault(); // Ngăn không hiển thị ở thanh trạng thái
-    });
-});
