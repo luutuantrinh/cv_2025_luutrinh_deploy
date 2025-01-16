@@ -482,6 +482,12 @@
   <script src="assets/js/magnific-popup.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // Thay đổi URL khi trang được tải
+    if (window.location.pathname.endsWith('/blog-details.html')) {
+      window.history.replaceState(null, null, '/blog-details');
+    }
+  </script>
 </body>
 
 </html>
