@@ -482,6 +482,13 @@
   <script src="assets/js/magnific-popup.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // Nếu URL chứa "blog-details.html", xóa nó và điều hướng
+    if (window.location.pathname.endsWith('/blog-details.html')) {
+        const newPath = window.location.pathname.replace('/blog-details.html', '/');
+        window.history.replaceState(null, '', newPath);
+    }
+</script>
 </body>
 
 </html>
