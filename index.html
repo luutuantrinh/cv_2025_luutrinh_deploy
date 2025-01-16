@@ -2161,23 +2161,12 @@
         })();
     </script>
     <script>
-        // Lấy URL hiện tại
-        const path = window.location.pathname;
-      
-        // Kiểm tra nếu đường dẫn không chứa ".html"
-        if (!path.endsWith('/') && !path.includes('.html')) {
-          // Giả sử thêm đuôi "/index.html" nếu là thư mục
-          window.history.replaceState(null, '', path + '/');
+        // Nếu URL chứa "index.html", xóa nó và điều hướng
+        if (window.location.pathname.endsWith('/index.html')) {
+            const newPath = window.location.pathname.replace('/index.html', '/');
+            window.history.replaceState(null, '', newPath);
         }
-      
-        // Nếu người dùng truy cập vào "blog-details", tự động thêm ".html"
-        const routes = ['blog-details']; // Danh sách các trang
-        for (const route of routes) {
-          if (path.includes(route) && !path.endsWith('.html')) {
-            window.location.replace(`${route}.html`);
-          }
-        }
-      </script>
+    </script>
 
 </body>
 
