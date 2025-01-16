@@ -3494,18 +3494,3 @@ body.absolute_header .breadcrumb_area {
     margin-bottom: 30px; /* Thêm khoảng cách phía dưới */
 }
 
-/* Custom a tag with href attribute */
-
-a {
-    pointer-events: auto; /* Đảm bảo vẫn bấm được */
-}
-
-a:hover {
-    cursor: pointer;
-}
-
-a:hover::after {
-    content: '';
-    position: absolute;
-    pointer-events: none; /* Không ảnh hưởng sự kiện hover */
-}
