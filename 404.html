@@ -1,10 +1,15 @@
 <script>
-    // Lấy URL hiện tại
     const path = window.location.pathname;
 
-    // Điều hướng nếu người dùng truy cập các URL như `/index.html`
-    if (path.endsWith('/index.html')) {
-        const newPath = path.replace('/index.html', '/');
-        window.location.replace(newPath);
+    // Điều hướng theo URL thân thiện
+    const routes = {
+        '/blog-details': '/blog-details.html',
+    };
+
+    // Nếu URL không tồn tại nhưng khớp với các routes, điều hướng đến file tương ứng
+    if (routes[path]) {
+        window.location.replace(routes[path]);
+    } else {
+        document.body.innerHTML = '<h1>404 - Page Not Found</h1>';
     }
 </script>
