@@ -1,0 +1,10 @@
+<script>
+    // Lấy URL hiện tại
+    const path = window.location.pathname;
+
+    // Điều hướng nếu người dùng truy cập các URL như `/index.html`
+    if (path.endsWith('/index.html')) {
+        const newPath = path.replace('/index.html', '/');
+        window.location.replace(newPath);
+    }
+</script>
