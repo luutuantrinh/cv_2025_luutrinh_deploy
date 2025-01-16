@@ -464,14 +464,3 @@ document.querySelectorAll('.footer-menu a').forEach(anchor => {
         document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
     });
 });
-
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('mouseover', function (event) {
-        event.target.dataset.href = event.target.getAttribute('href'); // Lưu lại href vào dataset
-        event.target.removeAttribute('href'); // Xóa href để không hiển thị
-    });
-
-    link.addEventListener('mouseout', function (event) {
-        event.target.setAttribute('href', event.target.dataset.href); // Khôi phục href khi di chuột ra ngoài
-    });
-});
