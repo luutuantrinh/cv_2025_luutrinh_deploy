@@ -1019,6 +1019,7 @@ body.loaded {
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s; */
+	border-radius: 21px;
 	border: 2px solid var(--tj-theme-secondary);
     transition: 0.3s;
     transform: rotate(0); /* Giữ hình ảnh thẳng */
